@@ -14,7 +14,7 @@ img {
     width: 15rem;
 }
 
-.hoverable .overlay-fade {
+.hoverable .overlay {
     background-color: #4C8DAF;
     color: white;
     position: absolute;
@@ -22,34 +22,27 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    opacity: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: opacity .3s ease;
-}
-
-.hoverable:hover .overlay-fade {
-    opacity: 1;
-}
-
-.hoverable .overlay-slide {
-    background-color: #4C8DAF;
-    color: white;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: bottom .3s ease;
     overflow: hidden;
 }
 
-.hoverable:hover .overlay-slide {
+.hoverable .overlay.overlay-fade {
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.hoverable:hover .overlay.overlay-fade {
+    opacity: 1;
+}
+
+.hoverable .overlay.overlay-slide {
+    bottom: 100%;
+    transition: bottom .3s ease;
+}
+
+.hoverable:hover .overlay.overlay-slide {
     bottom: 0;
 }
