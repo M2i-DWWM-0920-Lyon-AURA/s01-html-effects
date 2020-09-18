@@ -1,0 +1,46 @@
+/* On souhaite que toutes les images s'adaptent à la taille de leur conteneur,
+peu importe leur placement ou leur sens, on peut donc se permettre
+d'écrire une règle dans un sélecteur img */
+img {
+    width: 100%;
+}
+
+#gallery {
+    display: flex;
+}
+
+.hoverable {
+    position: relative;
+    width: 15rem;
+}
+
+.hoverable .overlay {
+    background-color: blue;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity .3s ease;
+}
+
+.hoverable:hover .overlay {
+    opacity: 1;
+}
+
+h1 {
+    transition: all .3s ease;
+}
+
+h1:hover {
+    font-size: 4em;
+}
+
+
+
