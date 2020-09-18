@@ -38,11 +38,20 @@ img {
     opacity: 1;
 }
 
-.hoverable .overlay.overlay-slide {
+.hoverable .overlay.overlay-slide-down {
     bottom: 100%;
     transition: bottom .3s ease;
 }
 
-.hoverable:hover .overlay.overlay-slide {
+.hoverable:hover .overlay.overlay-slide-down {
     bottom: 0;
+}
+
+.hoverable .overlay.overlay-slide-left {
+    right: 100%;
+    transition: right .3s ease;
+}
+
+.hoverable:hover .overlay.overlay-slide-left {
+    right: 0;
 }
