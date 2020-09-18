@@ -14,8 +14,8 @@ img {
     width: 15rem;
 }
 
-.hoverable .overlay {
-    background-color: blue;
+.hoverable .overlay-fade {
+    background-color: #4C8DAF;
     color: white;
     position: absolute;
     top: 0;
@@ -30,17 +30,26 @@ img {
     transition: opacity .3s ease;
 }
 
-.hoverable:hover .overlay {
+.hoverable:hover .overlay-fade {
     opacity: 1;
 }
 
-h1 {
-    transition: all .3s ease;
+.hoverable .overlay-slide {
+    background-color: #4C8DAF;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: bottom .3s ease;
+    overflow: hidden;
 }
 
-h1:hover {
-    font-size: 4em;
+.hoverable:hover .overlay-slide {
+    bottom: 0;
 }
-
-
-
